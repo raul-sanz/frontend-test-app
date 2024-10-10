@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen bg-gray-50 w-screen">
+      <body className="h-screen bg-gray-50 w-screen max-h-screen">
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>

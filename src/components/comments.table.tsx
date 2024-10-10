@@ -24,8 +24,8 @@ export default function TableComments({comments}: {comments: Comment[]}) {
     return (
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mt-8 flow-root">
-          <div className="-mx-4 -my-2  sm:-mx-6 lg:-mx-8">
-            <div className="w-full py-2 align-middle sm:px-6 lg:px-8 h-[40rem] max-h-[800px] overflow-y-scroll overflow-x-scroll sm:overflow-x-hidden">
+          <div className="-mx-4 -my-2  sm:-mx-6 lg:-mx-8 bg-white p-4 rounded-md">
+            <div className="py-2 align-middle sm:px-6 lg:px-0 max-h-[800px] overflow-y-scroll overflow-x-scroll " style={{height:"calc(100vh - 170px)"}}>
               <table className=" divide-y divide-gray-300">
                 <thead>
                   <tr>
@@ -51,7 +51,7 @@ export default function TableComments({comments}: {comments: Comment[]}) {
                       </td>}
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 hidden md:block">{comment.name.substring(0,30)}{comment.name.length > 29 && "..."}</td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{ width < 420 ? `${comment.email.substring(0,25)}...` : comment.email}</td>
-                      <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                      <td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-4">
                           <EyeOpenIcon onClick={()=>{setSelectedItem(comment)}}/>
                       </td>
                     </tr>
