@@ -39,7 +39,7 @@ export default function TableComments({comments}: {comments: Comment[]}) {
                       Email
                     </th>
                     <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                      <span className="sr-only">Edit</span>
+                      <span ></span>
                     </th>
                   </tr>
                 </thead>
@@ -52,9 +52,7 @@ export default function TableComments({comments}: {comments: Comment[]}) {
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 hidden md:block">{comment.name.substring(0,30)}{comment.name.length > 29 && "..."}</td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{ width < 420 ? `${comment.email.substring(0,25)}...` : comment.email}</td>
                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                        
-                          <EyeOpenIcon onClick={()=>{setSelectedItem(comment)}}/> <span className="sr-only">, {comment.name}</span>
-                       
+                          <EyeOpenIcon onClick={()=>{setSelectedItem(comment)}}/>
                       </td>
                     </tr>
                   ))}
